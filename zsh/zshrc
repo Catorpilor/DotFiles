@@ -1,0 +1,57 @@
+#
+# Executes commands at the start of an interactive session.
+#
+# Authors:
+#   Sorin Ionescu <sorin.ionescu@gmail.com>
+#
+
+# Source Prezto.
+if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
+  source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
+fi
+
+if type nvim > /dev/null 2>&1; then
+  alias vim='nvim'
+fi
+
+# Customize to your needs...
+TERM=xterm-256color
+alias g='git'
+alias ta='tmux attach'
+alias gl='git pull --prune'
+alias glg="git log --graph --decorate --oneline --abbrev-commit"
+alias glga="glg --all"
+alias gp='git push origin HEAD'
+alias gpa='git push origin --all'
+alias gd='git diff'
+alias gc='git commit'
+alias gca='git commit -a'
+alias gco='git checkout'
+alias gb='git branch -v'
+alias ga='git add'
+alias gaa='git add -A'
+alias gcm='git commit -m'
+alias gcam='git commit -a -m'
+alias gs='git status -sb'
+alias gcl='git clone'
+alias gcb='git-copy-branch-name'
+alias gpr='gp && git pr'
+alias di='docker images'
+alias dia='docker images -a'
+alias dr='docker rmi'
+alias dps='docker ps'
+alias a='fasd -a'        # any
+alias s='fasd -si'       # show / search / select
+alias d='fasd -d'        # directory
+alias f='fasd -f'        # file
+alias sd='fasd -sid'     # interactive directory selection
+alias sf='fasd -sif'     # interactive file selection
+alias z='fasd_cd -d'     # cd, same functionality as j in autojump
+alias zz='fasd_cd -d -i' # cd with interactive selection
+alias diff="diff-so-fancy"
+alias cat="bat"
+alias find="fd"
+
+export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+export GOPATH="/home/terminus/go"
+export PATH=$GOPATH:$GOPATH/bin:$PATH
