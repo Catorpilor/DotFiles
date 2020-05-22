@@ -1,6 +1,6 @@
 [user]
-	email = xxxx@gmail.com
-	name = xxxx 
+	email = jiaojiangonghitster@gmail.com
+	name = Catorpilor
 [core]
 	pager = diff-so-fancy | less --tabs=4 -RFX
 [color]
