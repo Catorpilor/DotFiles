@@ -22,6 +22,7 @@ alias gl='git pull --prune'
 alias glg="git log --graph --decorate --oneline --abbrev-commit"
 alias glga="glg --all"
 alias gp='git push origin HEAD'
+alias ls='ls -thor'
 alias gpa='git push origin --all'
 alias gd='git diff'
 alias gc='git commit'
@@ -40,6 +41,8 @@ alias di='docker images'
 alias dia='docker images -a'
 alias dr='docker rmi'
 alias dps='docker ps'
+alias ps='ps auxf'
+alias myp='ps -fjH -u $USER'
 alias a='fasd -a'        # any
 alias s='fasd -si'       # show / search / select
 alias d='fasd -d'        # directory
@@ -51,6 +54,14 @@ alias zz='fasd_cd -d -i' # cd with interactive selection
 alias diff="diff-so-fancy"
 alias cat="bat"
 alias find="fd"
+
+mcd() {mkdir -p $1; cd $1}
+cdl() {cd $1; ls}
+backup() {cp "$1"{,.bak};}
+gfind() { find / -iname $@ 2>/dev/null }
+lfind() {find . -iname $@ 2>/dev/null }
+rtfm() { help $@ || man $@ || $BROWSER "https://www.google.com/search?q=$@"; }
+
 
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 export GOPATH="/home/terminus/go"
