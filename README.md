@@ -8,8 +8,8 @@
 
 ### Useful tools
 
-1. fd
-2. ripgrep
-3. bat
-4. diff-so-fancy
+1. [fd](https://github.com/sharkdp/fd)
+2. [ripgrep](https://github.com/BurntSushi/ripgrep)
+3. [bat](https://github.com/sharkdp/bat)
+4. [diff-so-fancy](https://github.com/so-fancy/diff-so-fancy)
 
